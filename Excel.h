@@ -18,7 +18,7 @@ class cExcel
 	Variant Books_New 			(void);
 	Variant Books_Open			(AnsiString url);
 	void 	SetActiveBooks		(Variant r){Books=r;};
-	void 	Books_Save			(String url);
+	void 	Books_Save			(AnsiString url);
 		
 	void 	SetActiveBook		(Variant r){Book=r;};
 	Variant GetBook				(int number);

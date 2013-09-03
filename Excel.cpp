@@ -65,9 +65,9 @@ catch (...)
 	return 0;
 	}
 }
-void 	cExcel::Books_Save		(String url)
+void 	cExcel::Books_Save		(AnsiString url)
 {
-//
+	GetBook(1).OleProcedure("SaveAs",url.c_str());
 }
 
 Variant cExcel::GetBook			(int number)
@@ -86,7 +86,7 @@ bool 	cExcel::Book_Close      (Variant Book)
 if (!Book.intVal){return false;}
 try
 	{
-	Books.OleProcedure("Close");
+	Book.OleProcedure("Close");
 	return true;
 	} catch (...)
 	{
